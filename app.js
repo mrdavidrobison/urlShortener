@@ -10,7 +10,7 @@ app.use(express.static(__dirname +'/public'));
 
 app.get('/new/:urlToShorten(*)', (req, res, next)=>{
   var { urlToShorten } = req.params;
-  console.log(urlToShorten);
+  return res.json({urlToShorten});
 });
 
 //Listen to see if working
