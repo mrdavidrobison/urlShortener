@@ -7,7 +7,7 @@ const shortUrl = require('.models/shorturl');
 app.use(bodyParser.json());
 app.use(cors());
 
-// connect to database
+// connect to databases
 mongoose.connect(process.env.MONGODB_URI  || 'mongodb://localhost/shortUrls');
 
 
