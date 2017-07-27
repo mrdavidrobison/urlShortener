@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const shortUrl = require('.models/shorturl');
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -13,9 +14,6 @@ app.get('/new/:urlToShorten(*)', (req, res, next)=>{
   return res.json({urlToShorten});
 });
 
-//Listen to see if working
-// (ES5) function(){}
-// process.env.PORT is for Heroku
 app.listen(process.env.PORT || 3000, ()=>{
 console.log('working');
 });
