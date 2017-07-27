@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/mrdavidrobison/urlShortener/issues"
   },
-  "homepage": "https://github.com/mrdavidrobison/urlShortener#readme"
+  "homepage": "https://github.com/mrdavidrobison/urlShortener#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.4"
+  }
 }
