@@ -19,6 +19,12 @@ app.get('/new/:urlToShorten(*)', (req, res, next)=>{
   var { urlToShorten } = req.params;
   // Regex for url
   var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+  var regex = expression;
+  if(regex.test(urlToShorten) === true) {
+    return 'works';
+  } else {
+    return 'fails';
+  }
   return res.json({urlToShorten});
 });
 
